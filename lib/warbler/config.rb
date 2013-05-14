@@ -106,6 +106,11 @@ module Warbler
     # List of ruby files to compile to class files. Default is to
     # compile all .rb files in the application.
     attr_accessor :compiled_ruby_files
+    
+    # Compilation compatibility version. Allow to generate jar including 1.9 ruby code.
+    # Not needed to generate war since webxml.jruby.compat.version allows 1.9 compilation.
+    # This takes precedence on webxml.jruby.compat.version.
+    attr_accessor :compilation_compatibility_version
 
     # Warbler writes an "init" file into the war at this location. JRuby-Rack and possibly other
     # launchers may use this to initialize the Ruby environment.
