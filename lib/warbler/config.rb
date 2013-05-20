@@ -184,6 +184,7 @@ module Warbler
       @init_filename     = 'META-INF/init.rb'
       @init_contents     = ["#{@warbler_templates}/config.erb"]
       @override_gem_home = false
+      @compilation_compatibility_version = nil
 
       before_configure
       yield self if block_given?
